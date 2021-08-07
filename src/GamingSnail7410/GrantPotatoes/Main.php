@@ -22,19 +22,15 @@ class Main extends PluginBase implements Listener{
    }
    public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args) : bool{
     switch($cmd->getName()){
-        case "steak":
-          if(!$sender instanceof Player){
-            $sender->sendMessage("This command only works in-game!")
-         }else{
-            if(!isset($args[0])){
-              $args[0] = 1;
-            }
-            $sender->getInventory()->addItem(Item::get(393,0,(int)$args[0]));
-            $sender->sendMessage("You have been granted" . $args[0] . "baked potatoes!");
-          }
-        break;
-      }
-      return true:
+        case "potato":
+if(!$sender instanceof Player){
+          $sender->sendMessage("This Command Only Works in-game!");
+     }else{
+          $sender->getInventory()->addItem(Item::get(393,0,$args[0])); 
+          $sender->sendMessage("You have just recieved". count($args[0]) . " baked potatoes!");
+     }
+}
+return true;
     }
 
 }
