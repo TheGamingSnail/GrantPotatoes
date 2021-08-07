@@ -1,6 +1,6 @@
 <?php
 
-namespace GamingSnail7410\Dialoguetest;
+namespace GamingSnail7410\GrantPotatoes;
 
 use pocketmine\plugin\PluginBase;
 
