@@ -2,6 +2,8 @@
 
 namespace GamingSnail7410\GrantPotatoes;
 
+use GamingSnail7410\GrantPotatoes\Item;
+
 use pocketmine\plugin\PluginBase;
 
 use pocketmine\Player;
