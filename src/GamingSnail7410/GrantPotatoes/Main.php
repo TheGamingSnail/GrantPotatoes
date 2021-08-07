@@ -14,6 +14,16 @@ use pocketmine\command\Command;
 
 use pocketmine\command\CommandSender;
 
+class Main extends PluginBase implements Listener{
+   public function onEnabled(){
+   	$this->getServer()->getPluginManager()->registerEvents($this,$this);
+   	$this->getLogger()->info("Plugin is Enabled");
+
+   }
+   
+   public function onDisabled(){
+   	$this->getLogger()->info("Plugin is Disabled");
+   }
 public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args) : bool{
    switch($cmd->getName()){
      case "test":
@@ -33,4 +43,6 @@ public function onCommand(CommandSender $sender, Command $cmd, string $label, ar
      break;
   }
   return true;
+}
+
 }
