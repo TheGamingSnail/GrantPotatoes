@@ -1,0 +1,18 @@
+name: GrantPotatoes
+version: 0.0.1
+author: GamingSnail7410
+main: GamingSnail7410\GrantPotatoes\Main
+api: 3.21.1
+mcpe-protocol: 448
+description: A plugin for giving yourself baked potatoes with1 simple command.
+
+commands:
+  potato:
+    description: this gives u baked potatoes
+    aliases: potato
+    permission: potato.command
+    
+permissions:
+    potato.command:
+    description: This is the potato command permission
+    default: op
